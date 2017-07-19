@@ -1,12 +1,12 @@
 #include <QApplication>
 #include "mainwindow.h"
-#include "manager.h"
+#include "datamanager.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Manager m;
-    MainWindow w(m);
+//    Manager m;
+    MainWindow w;
     w.show();
     return a.exec();
 }

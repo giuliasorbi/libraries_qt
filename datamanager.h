@@ -8,9 +8,9 @@
 #include "book.h"
 
 
-struct Manager
+struct DataManager
 {
-    Manager();
+    DataManager();
     QMap<int, Library> libraries;
     QMap<int, Category> categories;
     QMap<int, Book> books;

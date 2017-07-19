@@ -3,3 +3,4 @@
 build/
 /img
 *.pro.user
+*.cpp.autosave

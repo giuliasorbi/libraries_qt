@@ -11,11 +11,12 @@ SOURCES += main.cpp \
     category.cpp \
     book.cpp \
     mainwindow.cpp \
-    manager.cpp \
-    editbook.cpp \
-    treeitem.cpp \
-    treemodel.cpp \
-    addcategory.cpp
+#    editbook.cpp \
+#    treeitem.cpp \
+#    treemodel.cpp \
+#    addcategory.cpp \
+    datamodel.cpp \
+    datamanager.cpp
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -33,11 +34,12 @@ HEADERS += \
     category.h \
     book.h \
     mainwindow.h \
-    manager.h \
-    editbook.h \
-    treeitem.h \
-    treemodel.h \
-    addcategory.h
+#    editbook.h \
+#    treeitem.h \
+#    treemodel.h \
+#    addcategory.h \
+    datamodel.h \
+    datamanager.h
 
 RESOURCES += \
     icon.qrc

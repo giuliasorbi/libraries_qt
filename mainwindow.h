@@ -13,11 +13,13 @@
 #include <QPlainTextEdit>
 #include <QGroupBox>
 #include <QVBoxLayout>
+#include <QLabel>
 
-#include "manager.h"
-#include "editbook.h"
-#include "addcategory.h"
-#include "treemodel.h"
+#include "datamanager.h"
+//#include "editbook.h"
+//#include "addcategory.h"
+//#include "treemodel.h"
+#include "datamodel.h"
 
 
 class MainWindow : public QMainWindow
@@ -25,7 +27,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(Manager& m, QWidget* parent = nullptr);
+    MainWindow(QWidget* parent = nullptr);
     void createToolBars();
     void createActions();
     void createStatusBar();
@@ -40,33 +42,34 @@ private:
     QAction* newCat;
     QTreeView *view;
 //    QStandardItemModel* model;
-    TreeModel* model;
-    QGroupBox * groupBox;
-    QWidget* ww;
+//    TreeModel* model;
+
+    DataModel* dataModel;
+    QGroupBox* groupBox;
 
     QPushButton* btnEdit;
     QPushButton* btnDelete;
 
     QLabel *nameField, *authorField, *descField, *catField, *pix;
 
-    Manager& manager;
-    editBook* edit;
-    editBook* add;
-    addCategory* addCat;
+//    Manager& manager;
+//    editBook* edit;
+//    editBook* add;
+//    addCategory* addCat;
 
     QModelIndex editBookIndex;
 
 
-private slots:
-    bool showBookInfo();
-    void btnEdit_clicked();
-    void btnDelete_clicked();
-    void newBook();
-    void newCategory();
+//private slots:
+//    bool showBookInfo();
+//    void btnEdit_clicked();
+//    void btnDelete_clicked();
+//    void newBook();
+//    void newCategory();
 
-public slots:
-    void test(Manager&, const int&);
-    void newBookAdded(Manager& m);
+//public slots:
+//    void test(Manager&, const int&);
+//    void newBookAdded(Manager& m);
 
 };
 
