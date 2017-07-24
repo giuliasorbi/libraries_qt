@@ -12,11 +12,3 @@ Category::Category( int id, QString name, QString description )
       m_books()
 {}
 
-void Category::showBooks() const
-{
-    for( auto book : m_books ) {
-      qDebug() << book << "\n";
-
-    }
-}
-

@@ -4,19 +4,19 @@ CONFIG += c++11
 
 TARGET = libraries_qt
 
+
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    library.cpp \
+    datamanager.cpp \
     category.cpp \
     book.cpp \
-    mainwindow.cpp \
-#    editbook.cpp \
-#    treeitem.cpp \
-#    treemodel.cpp \
-#    addcategory.cpp \
     datamodel.cpp \
-    datamanager.cpp
+    mainwindow.cpp \
+    catmodel.cpp \
+    categorieswindow.cpp \
+    editcategory.cpp \
+    editbook.cpp
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -30,16 +30,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 HEADERS += \
-    library.h \
+    datamanager.h \
     category.h \
     book.h \
-    mainwindow.h \
-#    editbook.h \
-#    treeitem.h \
-#    treemodel.h \
-#    addcategory.h \
     datamodel.h \
-    datamanager.h
+    mainwindow.h \
+    catmodel.h \
+    categorieswindow.h \
+    editcategory.h \
+    editbook.h
 
 RESOURCES += \
     icon.qrc

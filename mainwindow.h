@@ -16,10 +16,10 @@
 #include <QLabel>
 
 #include "datamanager.h"
-//#include "editbook.h"
-//#include "addcategory.h"
-//#include "treemodel.h"
+#include "editbook.h"
 #include "datamodel.h"
+//#include "addbook.h"
+#include "categorieswindow.h"
 
 
 class MainWindow : public QMainWindow
@@ -27,50 +27,31 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget* parent = nullptr);
+    MainWindow(DataModel* dataModel, CategoriesWindow* CategoriesWindow, QWidget* parent = nullptr);
     void createToolBars();
     void createActions();
     void createStatusBar();
-//    void updateModel();
-
+    void createLayout();
 private:
-
-//    QPlainTextEdit* textEdit;
-    QToolBar* libToolBar;
-    QAction* newAct;
-    QAction* editCatAct;
-    QAction* newCat;
-    QTreeView *view;
-//    QStandardItemModel* model;
-//    TreeModel* model;
-
-    DataModel* dataModel;
-    QGroupBox* groupBox;
-
-    QPushButton* btnEdit;
-    QPushButton* btnDelete;
-
-    QLabel *nameField, *authorField, *descField, *catField, *pix;
-
-//    Manager& manager;
-//    editBook* edit;
-//    editBook* add;
-//    addCategory* addCat;
-
-    QModelIndex editBookIndex;
-
-
-//private slots:
-//    bool showBookInfo();
-//    void btnEdit_clicked();
-//    void btnDelete_clicked();
-//    void newBook();
-//    void newCategory();
-
-//public slots:
-//    void test(Manager&, const int&);
-//    void newBookAdded(Manager& m);
-
+    QAction* m_newAct;
+    QAction* m_editCatAct;
+    QListView* m_view;
+    QGridLayout* m_layout;
+    QGroupBox* m_groupBox;
+    QLabel *m_nameField, *m_authorField, *m_descField, *m_catField, *m_pix;
+    EditBook* m_edit;
+    QModelIndex m_editBookIndex;
+    DataModel* m_dataModel;
+    CategoriesWindow* m_catWindow;
+private slots:
+    bool showBookInfo(const QModelIndex&);
+    bool showBookInfo();
+    void btnEditClicked();
+    void btnDeleteClicked();
+    void newBook();
+    void showCategories();
+public slots:
+    bool onBookChanged(const QString&, const QString&, const QString&, const QString&, const int&, int);
 };
 
 

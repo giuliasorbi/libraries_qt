@@ -1,7 +1,6 @@
 #include "datamanager.h"
 
 DataManager::DataManager()
-    : libraries(),
-      categories(),
+    : categories(),
       books()
 {}
