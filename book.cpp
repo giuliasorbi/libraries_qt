@@ -19,7 +19,3 @@ Book::Book(int id, QString name, QString desc, QString author, QString image, in
       m_image(image),
       m_category(category)
 {}
-
-
-
-
